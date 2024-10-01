@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106108_NazlaSalsabila_C2'24.posttest4"/>
+        <attribute name="authors" value="Nazla Salsabila"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-01 07:25:26 PM"/>
+        <attribute name="created" value="TmF6bGEgU2Fsc2FiaWxhO0xBUFRPUC1BMkFKMUhCSzsyMDI0LTA5LTI5OzAxOjE2OjI0IEFNOzM3Mzg="/>
+        <attribute name="edited" value="TmF6bGEgU2Fsc2FiaWxhO0xBUFRPUC1BMkFKMUhCSzsyMDI0LTA5LTMwOzA1OjA1OjAyIFBNOzQ7TmF6bGEgU2Fsc2FiaWxhO0xBUFRPUC1BMkFKMUhCSzsyMDI0LTA5LTIxOzEyOjEwOjQzIFBNOzI0MDkxMDYxMDhfTmF6bGFTYWxzYWJpbGFfQzInMjQucG9zdHRlc3QzLmZwcmc7MTE1NTk="/>
+        <attribute name="edited" value="TmF6bGEgU2Fsc2FiaWxhO0xBUFRPUC1BMkFKMUhCSzsyMDI0LTEwLTAxOzA3OjI1OjI2IFBNOzY7Mzg1Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="usernameLogin, passwordLogin, ulang, keluarProgram" type="String" array="False" size=""/>
+            <declare name="percobaan" type="Integer" array="False" size=""/>
+            <assign variable="percobaan" expression="0"/>
+            <while expression="percobaan &lt; 3">
+                <output expression="&quot;Masukan username anda : &quot;" newline="True"/>
+                <input variable="usernameLogin"/>
+                <output expression="&quot;Masukan password anda : &quot;" newline="True"/>
+                <input variable="passwordLogin"/>
+                <if expression="usernameLogin == &quot;nazlasalsabila&quot; &amp;&amp; passwordLogin == &quot;108&quot;">
+                    <then>
+                        <output expression="&quot;Selamat anda berhasil login!&quot;" newline="True"/>
+                        <assign variable="ulang" expression="&quot;iya&quot;"/>
+                        <while expression="ulang = &quot;iya&quot;">
+                            <declare name="hargaMobil" type="Integer" array="False" size=""/>
+                            <declare name="jenisMobil" type="String" array="False" size=""/>
+                            <declare name="DiskonTesla, DiskonToyota, DiskonHyundai" type="Real" array="False" size=""/>
+                            <declare name="hSDtesla, hSDtoyota, hSDhyundai" type="Real" array="False" size=""/>
+                            <output expression="&quot;Masukkan harga mobil yang diinginkan :&quot;" newline="True"/>
+                            <input variable="hargaMobil"/>
+                            <output expression="&quot;1. Tesla&quot;" newline="True"/>
+                            <output expression="&quot;2. Toyota&quot;" newline="True"/>
+                            <output expression="&quot;3. Hyundai&quot;" newline="True"/>
+                            <output expression="&quot;Pilih jenis mobil yang ingin dibeli : &quot;" newline="True"/>
+                            <input variable="jenisMobil"/>
+                            <if expression="jenisMobil == &quot;1&quot;">
+                                <then>
+                                    <assign variable="diskonTesla" expression="hargaMobil*0.17"/>
+                                    <output expression="&quot;mobil Tesla seharga : &quot;" newline="True"/>
+                                    <output expression="diskonTesla" newline="True"/>
+                                    <assign variable="hSDtesla" expression="hargaMobil-diskonTesla"/>
+                                    <output expression="&quot;harga setelah diskon menjadi: &quot;" newline="True"/>
+                                    <output expression="hSDtesla" newline="True"/>
+                                    <output expression="&quot;ulangi? (iya/tidak)&quot;" newline="True"/>
+                                    <input variable="ulang"/>
+                                    <output expression="&quot;Keluar program? (iya/tidak)&quot;" newline="True"/>
+                                    <input variable="keluarProgram"/>
+                                    <if expression="keluarProgram = &quot;iya&quot;">
+                                        <then>
+                                            <assign variable="percobaan" expression="3"/>
+                                            <assign variable="ulang" expression="&quot;iyaa&quot;"/>
+                                            <output expression="&quot;Anda berhasil keluar!&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="jenisMobil == &quot;2&quot;">
+                                        <then>
+                                            <assign variable="diskonToyota" expression="hargaMobil*0.21"/>
+                                            <output expression="&quot;mobil Toyota seharga :&quot;" newline="True"/>
+                                            <output expression="diskonToyota" newline="True"/>
+                                            <assign variable="hSDToyota" expression="hargaMobil-diskonToyota"/>
+                                            <output expression="&quot;harga setelah diskon menjadi :&quot;" newline="True"/>
+                                            <output expression="hSDToyota" newline="True"/>
+                                            <output expression="&quot;ulangi? (iya/tidak)&quot;" newline="True"/>
+                                            <input variable="ulang"/>
+                                            <output expression="&quot;Keluar program? (iya/tidak)&quot;" newline="True"/>
+                                            <input variable="keluarProgram"/>
+                                            <if expression="keluarProgram = &quot;iya&quot;">
+                                                <then>
+                                                    <assign variable="percobaan" expression="3"/>
+                                                    <assign variable="ulang" expression="&quot;iyaa&quot;"/>
+                                                    <output expression="&quot;Anda berhasil keluar!&quot;" newline="True"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="jenisMobil == &quot;3&quot;">
+                                                <then>
+                                                    <assign variable="diskonHyundai" expression="hargaMobil*0.23"/>
+                                                    <output expression="&quot;mobil Hyundai seharga :&quot;" newline="False"/>
+                                                    <output expression="diskonHyundai" newline="True"/>
+                                                    <assign variable="hSDHyundai" expression="hargaMobil-diskonHyundai"/>
+                                                    <output expression="&quot;harga setelah diskon menjadi :&quot;" newline="True"/>
+                                                    <output expression="hSDhyundai" newline="True"/>
+                                                    <output expression="&quot;ulangi? (iya/tidak)&quot;" newline="True"/>
+                                                    <input variable="ulang"/>
+                                                    <output expression="&quot;Keluar program? (iya/tidak)&quot;" newline="True"/>
+                                                    <input variable="keluarProgram"/>
+                                                    <if expression="keluarProgram = &quot;iya&quot;">
+                                                        <then>
+                                                            <assign variable="percobaan" expression="3"/>
+                                                            <assign variable="ulang" expression="&quot;iyaa&quot;"/>
+                                                            <output expression="&quot;Anda berhasil keluar!&quot;" newline="True"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Bu Navira tidak jadi membeli mobil&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </while>
+                    </then>
+                    <else>
+                        <output expression="&quot;Mohon maaf login anda tidak berhasil!&quot;" newline="True"/>
+                        <assign variable="percobaan" expression="percobaan + 1"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
